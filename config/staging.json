@@ -1,0 +1,38 @@
+{
+  "knex": {
+    "client": "postgresql",
+    "connection": {
+      "database": "dcg7bp9psmblou",
+      "user": "pvpzpspvpzgnii",
+      "password": "816a7725ffa4ca9bc78c57592c8d5a010149cc2ef5a2a82bb76dc854021b8371",
+      "host": "ec2-23-23-248-162.compute-1.amazonaws.com",
+      "port": 5432
+    },
+    "pool": {
+      "min": 1,
+      "max": 2
+    },
+    "migrations": {
+      "tableName": "knex_migrations",
+      "directory": "db/migrations"
+    },
+    "seeds": {
+      "directory": "db/seeds"
+    }
+  },
+
+  "passport": {
+    "Google": {
+      "clientID" : "353885361621-qv94urjjoirfn4qn1ce73ka20b8jcvud.apps.googleusercontent.com",
+      "clientSecret": "Alp6WduVRXaeBcq9q-CuVd_H",
+      "callbackURL": "localhost:3000"
+
+    },
+    "Facebook": {
+      "clientID": "1643339879010831",
+      "clientSecret": "b16dae527537cf28efd1b02edec57909",
+      "callbackURL": "/auth/facebook/callback"
+    },
+    "Twitter": {}
+  }
+}
