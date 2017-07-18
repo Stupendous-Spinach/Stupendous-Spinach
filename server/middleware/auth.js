@@ -1,6 +1,7 @@
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 const redisClient = require('redis').createClient();
+require('dotenv').config();
 
 module.exports.verify = (req, res, next) => {
   if (req.isAuthenticated()) {
@@ -11,8 +12,8 @@ module.exports.verify = (req, res, next) => {
 
 module.exports.session = session({
   store: new RedisStore({
-    client: process.env.REDIS_CLIENT || redisClient,
-    host: process.env.HOST || 'localhost',
+    client: redisClient,
+    host: process.env.REDIS_CLIENT || 'localhost',
     port: process.env.REDIS_PORT || 6379,
     pass: process.env.REDIS_PASSWORD || '',
     user: process.env.REDIS_USER || 'h'

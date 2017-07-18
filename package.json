@@ -5,7 +5,7 @@
     "node": "6.11.1"
   },
   "scripts": {
-    "dev-start": "NODE_ENV=development nodemon server",
+    "dev-start": "NODE_ENV=staging nodemon server",
     "start": "NODE_ENV=staging node server/index.js",
     "test": "NODE_ENV=test grunt test",
     "build": "webpack-dashboard -- webpack --watch"
