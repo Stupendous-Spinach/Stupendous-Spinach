@@ -6,7 +6,8 @@
       "user": "pvpzpspvpzgnii",
       "password": "816a7725ffa4ca9bc78c57592c8d5a010149cc2ef5a2a82bb76dc854021b8371",
       "host": "ec2-23-23-248-162.compute-1.amazonaws.com",
-      "port": 5432
+      "port": 5432,
+      "ssl": true
     },
     "pool": {
       "min": 1,
