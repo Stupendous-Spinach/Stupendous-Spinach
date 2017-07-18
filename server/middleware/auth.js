@@ -1,7 +1,7 @@
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 const redisClient = require('redis').createClient();
-require('dotenv').config();
+// require('dotenv').config();
 console.log('redis host', process.env.REDIS_HOST);
 console.log('redis port', process.env.REDIS_PORT);
 console.log('redis password', process.env.REDIS_PASSWORD);
@@ -20,7 +20,6 @@ module.exports.session = session({
     host: process.env.REDIS_HOST || 'localhost',
     port: process.env.REDIS_PORT || 6379,
     pass: process.env.REDIS_PASSWORD || '',
-    user: process.env.REDIS_USER || 'H'
   }),
   secret: 'more laughter, more love, more life',
   resave: false,
