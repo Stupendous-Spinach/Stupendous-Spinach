@@ -7,7 +7,7 @@ import { render } from 'react-dom';
 // import components
 import App from './components/App';
 // import Single from './components/Single';
-// import PhotoGrid from './components/PhotoGrid';
+// import PhotoGrid from './components/PhotoGrid'; 
 import Camera from './components/Camera';
 
 // import react router
