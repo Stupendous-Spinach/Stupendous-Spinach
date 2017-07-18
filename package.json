@@ -5,7 +5,6 @@
     "node": "6.11.1"
   },
   "scripts": {
-    // "heroku-postbuild": "./node_modules/.bin/webpack -p --config ./webpack.config.babel.js",
     "heroku-postbuild": "yarn start",
     "dev-start": "NODE_ENV=development nodemon server",
     "start": "NODE_ENV=staging node server/index.js",
