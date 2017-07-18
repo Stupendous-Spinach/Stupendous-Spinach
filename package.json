@@ -5,7 +5,6 @@
     "node": "6.11.1"
   },
   "scripts": {
-    "heroku-postbuild": "yarn build",
     "dev-start": "NODE_ENV=development nodemon server",
     "start": "NODE_ENV=staging node server/index.js",
     "test": "NODE_ENV=test grunt test",
