@@ -1,7 +1,6 @@
 # Project specific
 config/development.json
 config/production.json
-config/staging.json
 config/test.json
 
 # OS X
@@ -27,8 +26,9 @@ coverage
 .grunt
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
-build/
 dist/
+build/
+
 
 # Dependency directorys
 # Deployed apps should consider commenting these lines out:
