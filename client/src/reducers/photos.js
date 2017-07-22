@@ -1,4 +1,4 @@
-import store from '../store';
+//import store from '../store';
 //import watch from 'redux-watch';
 
 export default function photoArray(state = [], action) {
@@ -14,6 +14,15 @@ export default function photoArray(state = [], action) {
           ...state[i], like_count: state[i].like_count === null ? state[i].like_count = 1 : state[i].like_count + 1
         },
         ...state.slice(i + 1),
+      ]
+    case 'DECREMENT_LIKES':
+    const j = action.index;
+      return [
+        ...state.slice(0, j),
+        {
+          ...state[j], like_count: state[j].like_count === null ? state[j].like_count = 0 : state[j].like_count - 1
+        },
+        ...state.slice(j + 1),
       ]
   default:
     return state;

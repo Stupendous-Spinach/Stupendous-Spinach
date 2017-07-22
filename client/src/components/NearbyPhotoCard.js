@@ -29,13 +29,11 @@ class NearbyPhotoCard extends Component {
     const commentId = `/comments/${id}`;
     const { i } = this.props;
     const heart = liked ? "fa fa-heart heart" : "glyphicon glyphicon-heart-empty heart";
-
     return (
       <div className="img-rounded">
         <img src={ url } className='img-thumbnail'/>
         <div>
           <span className={ heart } aria-hidden="true" onClick={ this.likeOrDislike.bind(this, i, liked, id) }>{ like_count }</span>
-
           <span className="fa fa-comment comment" aria-hidden="true">
             <Link to={ commentId }>{ comment_count }<span className="comments">Comments</span></Link>
           </span>
@@ -49,6 +47,8 @@ class NearbyPhotoCard extends Component {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ increment, decrement }, dispatch);
 };
+
+
 
 export default connect(null, mapDispatchToProps)(NearbyPhotoCard);
 
