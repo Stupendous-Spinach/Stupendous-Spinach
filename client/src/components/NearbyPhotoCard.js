@@ -58,7 +58,6 @@ class NearbyPhotoCard extends Component {
                 <span className="comments">Comments</span>
               </Link> : ''
           }
-        </div>
       </div> 
     );
   }

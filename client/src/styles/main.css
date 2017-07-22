@@ -122,8 +122,12 @@ a {
 .heart {
   margin: 0 auto; 
   margin-left: 8%;
+<<<<<<< HEAD
   margin-top: -4%: 
 >>>>>>> added heartbeat
+=======
+  /*margin-top: -4%: */
+>>>>>>> added heartbeat3
 }
 
 .likes-heart{
