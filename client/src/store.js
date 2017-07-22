@@ -38,6 +38,7 @@ const createStoreWithMiddleware = applyMiddleware(logger, promiseMiddleware, thu
 
 const store = createStore(rootReducer, defaultState, enhancers);
 
+
 export const history = syncHistoryWithStore(browserHistory, store);
 
 export default createStoreWithMiddleware(rootReducer, defaultState, enhancers);

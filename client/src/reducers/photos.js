@@ -1,3 +1,6 @@
+import store from '../store';
+//import watch from 'redux-watch';
+
 export default function photoArray(state = [], action) {
   const i = action.index;
   switch (action.type) {
@@ -27,7 +30,13 @@ export default function photoArray(state = [], action) {
       },
       ...state.slice(i + 1),
     ]
+
   default:
     return state;
   }
 }
+// console.log('store ', store);
+// let w = watch(store.getState, 'photoArray');
+// store.subscribe(w((newVal, oldVal, objectPath) => {
+//   console.log('%s changed from %s to %s', objectPath, oldVal, newVal);
+// }))
