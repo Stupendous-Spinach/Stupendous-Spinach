@@ -28,7 +28,7 @@ const config = {
       },
       // CSS
       { 
-        test: /\.(scss|css)$/, 
+        test: /\.(scss|css|styl)$/, 
         include: path.join(__dirname, 'client/src/styles'),
         loader: 'style-loader!css-loader!stylus-loader!sass-loader'
       }

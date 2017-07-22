@@ -36,8 +36,10 @@ class NearbyPhotoCard extends Component {
         <img src={ url } className='img-thumbnail'/>
 
         <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-          <span key={like_count} className={heart} aria-hidden="true" onClick={ this.likeOrDislike.bind(this, i, liked, id) }>{ like_count }</span>
+          <span key={like_count} className={heart} aria-hidden="true" onClick={ this.likeOrDislike.bind(this, i, liked, id) }> </span>
         </CSSTransitionGroup>
+
+        <span>{ like_count } </span>
      
         <span className="fa fa-comment comment" aria-hidden="true">
           <Link to={ commentId }>{ comment_count }<span className="comments">Comments</span></Link>
