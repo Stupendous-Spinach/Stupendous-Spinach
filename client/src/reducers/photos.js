@@ -1,4 +1,4 @@
-import store from '../store';
+//import store from '../store';
 //import watch from 'redux-watch';
 
 export default function photoArray(state = [], action) {
@@ -30,7 +30,6 @@ export default function photoArray(state = [], action) {
       },
       ...state.slice(i + 1),
     ]
-
   default:
     return state;
   }
