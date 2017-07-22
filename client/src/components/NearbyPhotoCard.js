@@ -6,6 +6,8 @@ import { increment, decrement } from '../actions/likeAction';
 import { bindActionCreators } from 'redux';
 import { axiosAction } from '../helpers/axiosAction';
 
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+
 require('../styles/main.css');
 
 class NearbyPhotoCard extends Component {
@@ -28,17 +30,20 @@ class NearbyPhotoCard extends Component {
     const { url, like_count, comment_count, id, caption, liked } = this.props.photo;
     const commentId = `/comments/${id}`;
     const { i } = this.props;
-    const heart = liked ? "fa fa-heart heart" : "glyphicon glyphicon-heart-empty heart";
+    const heart = liked ?  "fa fa-heart heart" : "glyphicon glyphicon-heart-empty heart";
     return (
       <div className="img-rounded">
         <img src={ url } className='img-thumbnail'/>
-        <div>
-          <span className={ heart } aria-hidden="true" onClick={ this.likeOrDislike.bind(this, i, liked, id) }>{ like_count }</span>
-          <span className="fa fa-comment comment" aria-hidden="true">
-            <Link to={ commentId }>{ comment_count }<span className="comments">Comments</span></Link>
-          </span>
-        </div>
-        <h6 className='text'>{ caption }</h6>
+
+        <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+          <span key={like_count} className={heart} aria-hidden="true" onClick={ this.likeOrDislike.bind(this, i, liked, id) }>{ like_count }</span>
+        </CSSTransitionGroup>
+     
+        <span className="fa fa-comment comment" aria-hidden="true">
+          <Link to={ commentId }>{ comment_count }<span className="comments">Comments</span></Link>
+        </span>
+        
+        <h6 className='text'> { caption }</h6>
       </div> 
     );
   }
