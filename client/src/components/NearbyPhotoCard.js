@@ -35,6 +35,7 @@ class NearbyPhotoCard extends Component {
         <img src={ url } className='img-thumbnail'/>
         <div>
           <span className={ heart } aria-hidden="true" onClick={ this.likeOrDislike.bind(this, i, liked, id) }>{ like_count }</span>
+
           <span className="fa fa-comment comment" aria-hidden="true">
             <Link to={ commentId }>{ comment_count }<span className="comments">Comments</span></Link>
           </span>
