@@ -8,6 +8,13 @@ export const increment = (index) => {
   };
 };
 
+export const decrement = (index) => {
+  return {
+    type: 'DECREMENT_LIKES',
+    index
+  };
+};
+
 // add comments
 export const incrementComment = (index) => {
   return {

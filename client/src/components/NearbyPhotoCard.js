@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux';
 import { axiosAction } from '../helpers/axiosAction';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+
 require('../styles/main.css');
 
 class NearbyPhotoCard extends Component {
@@ -29,9 +31,10 @@ class NearbyPhotoCard extends Component {
     const { url, like_count, comment_count, id, caption, liked, age, first } = this.props.photo;
     const commentId = `/comments/${id}`;
     const { i } = this.props;
-    const heart = liked ? "fa fa-heart heart" : "glyphicon glyphicon-heart-empty heart";
+    const heart = liked ?  "fa fa-heart heart" : "glyphicon glyphicon-heart-empty heart";
     return (
       <div className="img-rounded">
+
         <div>
           <span className="dateAndTime">Date And Time</span>
           <img src={ url } className='img-thumbnail'/>
