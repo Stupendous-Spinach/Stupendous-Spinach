@@ -26,24 +26,36 @@ class NearbyPhotoCard extends Component {
   }
 
   render() {
-    const { url, like_count, comment_count, id, caption, liked } = this.props.photo;
+    const { url, like_count, comment_count, id, caption, liked, age } = this.props.photo;
     const commentId = `/comments/${id}`;
     const { i } = this.props;
     const heart = liked ? "fa fa-heart heart" : "glyphicon glyphicon-heart-empty heart";
 
     return (
       <div className="img-rounded">
-        <img src={ url } className='img-thumbnail'/>
         <div>
+          <span className="dateAndTime">Date And Time</span>
+          <img src={ url } className='img-thumbnail'/>
+        </div>
+        <div className="likeCaptionComment">
           <div>
             <span className="profile">Steven</span>
           </div>
           <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
             <span key={ like_count } className={ heart } aria-hidden="true" onClick={ this.likeOrDislike.bind(this, i, liked, id) }></span>
           </CSSTransitionGroup>
-          <div className="likeDiv"><span className="likes">{ like_count + ' '}</span><span className="likeCount">Likes</span></div>
-          <h6 className='h6-nearbyPhotoCard'>{ caption }</h6>
-          <Link to={ commentId }><span className="commentCount">{ comment_count }</span><span className="comments">Comments</span></Link>
+          <div className="likeDiv">
+            <span className="likes">{ !like_count ? '' : like_count + ' '}</span>
+            <span className="likeCount">Likes</span>
+          </div>
+          { caption ? <h6 className='h6-nearbyPhotoCard'>{ caption }</h6> : '' }
+          { 
+            comment_count ? 
+              <Link to={ commentId }>
+                <span className="commentCount">{ !comment_count ? '' : comment_count }</span>
+                <span className="comments">Comments</span>
+              </Link> : ''
+          }
         </div>
       </div> 
     );
