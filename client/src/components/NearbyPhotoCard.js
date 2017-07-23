@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux';
 import { axiosAction } from '../helpers/axiosAction';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+
 require('../styles/main.css');
 
 class NearbyPhotoCard extends Component {
@@ -77,6 +79,8 @@ class NearbyPhotoCard extends Component {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ increment, decrement }, dispatch);
 };
+
+
 
 export default connect(null, mapDispatchToProps)(NearbyPhotoCard);
 

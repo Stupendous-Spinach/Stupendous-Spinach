@@ -18,15 +18,18 @@ export default function photoArray(state = [], action) {
     return [
       ...state.slice(0, i),
       {
-        ...state[i], like_count: state[i].like_count - 1, liked: false
-      },
-      ...state.slice(i + 1),
-    ]
-  case 'INCREMENT_COMMENT':
-    return [
-      ...state.slice(0, i),
-      {
-        ...state[i], comment_count: state[i].comment_count === null ? state[i].comment_count = 1 : state[i].comment_count + 1
+// <<<<<<< HEAD
+//         ...state[i], like_count: state[i].like_count - 1, liked: false
+//       },
+//       ...state.slice(i + 1),
+//     ]
+//   case 'INCREMENT_COMMENT':
+//     return [
+//       ...state.slice(0, i),
+//       {
+//         ...state[i], comment_count: state[i].comment_count === null ? state[i].comment_count = 1 : state[i].comment_count + 1
+// =======
+        ...state[i], like_count: state[i].like_count === null ? state[i].like_count = 0 : state[i].like_count - 1, liked: false
       },
       ...state.slice(i + 1),
     ]
