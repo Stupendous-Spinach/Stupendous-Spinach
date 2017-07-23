@@ -119,6 +119,39 @@ a {
   
 }
 
+.overAll
+{
+   /* height:400px;
+    width:400px;*/
+    position:relative;
+}
+
+.image
+{    
+    position:absolute;
+   /* left:0;
+    top:0;*/
+}
+/*.img-rounded {
+
+  position: absolute;
+}*/
+
+
+
+#distanceText
+{
+    z-index:100;
+    position:absolute;    
+    color:white;
+    left:2%;
+    top:4%;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: .5em;
+    padding: 1%;
+}
+
+
 .heart {
   margin: 0 auto; 
   margin-left: 8%;

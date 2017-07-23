@@ -28,10 +28,26 @@ class NearbyPhotoCard extends Component {
   }
 
   render() {
-    const { url, like_count, comment_count, id, caption, liked, age, first } = this.props.photo;
+
+    const { url, like_count, comment_count, id, caption, liked, distance, age } = this.props.photo;
     const commentId = `/comments/${id}`;
     const { i } = this.props;
     const heart = liked ?  "fa fa-heart heart" : "glyphicon glyphicon-heart-empty heart";
+
+    let timeLapse = null;
+
+    if (age.days) {
+      timeLapse = age.days + ' days';
+    } else if (age.hours) {
+      timeLapse = age.hours + ' hours';
+    } else if (age.minutes) {
+      timeLapse = age.minutes + ' minutes';
+    } else {
+      timeLapse = age[Object.keys(age)[0]];
+    }
+    let distanceTime = ' ' + `${distance} mi, ${timeLapse }` + ' ';
+    );
+
     return (
       <div className="img-rounded">
 
@@ -60,6 +76,7 @@ class NearbyPhotoCard extends Component {
           }
       </div> 
     );
+
   }
 }
 
