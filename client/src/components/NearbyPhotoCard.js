@@ -7,8 +7,6 @@ import { bindActionCreators } from 'redux';
 import { axiosAction } from '../helpers/axiosAction';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-import CSSTransitionGroup from 'react-addons-css-transition-group';
-
 require('../styles/main.css');
 
 class NearbyPhotoCard extends Component {
