@@ -13,7 +13,6 @@ router.post('/imageUpload', (req, res) => {
   const { caption } = req.body;
   const { shareSelection } = req.body; //currently unused
   
-  console.log('request body to /imageUpload: ', req.body);
   //save url, lat, long to database
 
   PhotosController.savePhoto({ latitude, longitude, url, profile_id: req.user.id, caption })
@@ -32,14 +31,12 @@ router.post('/nearbyPhotos', (req, res) => {
   let coordinates;
 
   if (req.body.location) {
-    coordinates = req.body.location.coords;
+    coordinates = req.body.location;
   } else {
     coordinates = {latitude: 37.8837339, longitude: -122.5090785};
   }
 
-  console.log('coordinates', coordinates);
-
-  PhotosController.getNearbyPhotos(coordinates)
+  PhotosController.getNearbyPhotos(coordinates, req.user.id)
     .then((data) => {
       res.status(200).send(data);
     })
@@ -91,7 +88,6 @@ router.put('/removelike/:photoID', (req, res) => {
 });
 
 router.get('/getAllComments/:photoID', (req, res) =>{
-  console.log('req params ', req.params);
   CommentsController.getAllComments(req.params.photoID)
     .then((comments) => {
       res.status(200).send(comments);

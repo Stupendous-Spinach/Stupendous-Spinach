@@ -25,9 +25,6 @@ class PhotoQueries {
 
 }
 
-// PhotoQueries.getPhotoLikesForUser(2)
-// .then((data) => console.log(data));
-
 
 module.exports = db.model('Photo', Photo);
 module.exports.PhotoQueries = new PhotoQueries();
