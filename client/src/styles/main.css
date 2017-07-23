@@ -42,6 +42,7 @@
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .heart {
   margin: 0 8px 0 0;
 }
@@ -54,6 +55,8 @@
   margin-top: -4px;
 }
 
+=======
+>>>>>>> e5e0449b2462570c42d2c4585c04cfdb8f4f2e69
 .comments {
   width: 82px;
   height: 16px;
@@ -113,10 +116,60 @@ a {
   float: right;
   font-size: 14px;
   margin-right: 12px;
+  margin-top: 26px;
+  
+}
+
+<<<<<<< HEAD
+.overAll
+{
+   /* height:400px;
+    width:400px;*/
+    position:relative;
+}
+
+.image
+{    
+    position:absolute;
+   /* left:0;
+    top:0;*/
+}
+.img-rounded {
+
+  position: absolute;
+}
+
+
+
+#distanceText
+{
+    z-index:100;
+    position:absolute;    
+    color:white;
+    left:2%;
+    top:4%;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: .5em;
+    padding: 1%;
+
+}
+
+
+.heart {
+  margin: 0 auto; 
+  margin-left: 8%;
+  margin-top: -4%; 
+=======
+.heart {
+  margin: 0 auto; 
+  margin-left: 8%;
+  /*margin-top: -4%: */
+>>>>>>> e5e0449b2462570c42d2c4585c04cfdb8f4f2e69
 }
 
 .likes-heart{
   opacity: 0;
+<<<<<<< HEAD
   /* padding: 8%; */
   transition: all 0.5s;
   transform : translateX(-25%) translateY(-25%) scale(1.8);
@@ -177,3 +230,32 @@ a {
   margin: 6px 10px;
   color: white;
 }
+=======
+  padding: 8%;
+  transition: all 0.5s;
+  transform : translateX(-50%) translateY(-50%) scale(2);
+  display : block;
+  margin-left: 8%; 
+
+}
+
+.like-enter{
+  transition: all .2s;
+  opacity: 1;  
+  margin-left: 8%; 
+}
+
+.like-enter-active{
+  transform : translateX(-50%) translateY(-50%) scale(2);
+  margin-left: 8%; 
+}
+
+.like-leave-active{
+  margin-left: 8%; 
+  display: none;
+}
+    
+
+
+>>>>>>> e5e0449b2462570c42d2c4585c04cfdb8f4f2e69
+
