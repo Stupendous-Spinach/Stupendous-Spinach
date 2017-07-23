@@ -112,9 +112,7 @@ a {
 .profile {
   float: right;
   font-size: 14px;
-<<<<<<< HEAD
   margin-right: 12px;
-=======
   margin-top: 26px;
   
 }
@@ -156,12 +154,7 @@ a {
 .heart {
   margin: 0 auto; 
   margin-left: 8%;
-<<<<<<< HEAD
-  margin-top: -4%: 
->>>>>>> added heartbeat
-=======
-  /*margin-top: -4%: */
->>>>>>> added heartbeat3
+  margin-top: -4%; 
 }
 
 .likes-heart{
