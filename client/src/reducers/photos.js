@@ -19,6 +19,8 @@ export default function photoArray(state = [], action) {
       ...state.slice(0, i),
       {
 // <<<<<<< HEAD
+//Sara's rebase
+// dont know if this was needed so just commented it
 //         ...state[i], like_count: state[i].like_count - 1, liked: false
 //       },
 //       ...state.slice(i + 1),
