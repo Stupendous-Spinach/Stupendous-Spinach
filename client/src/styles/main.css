@@ -132,10 +132,10 @@ a {
    /* left:0;
     top:0;*/
 }
-/*.img-rounded {
+.img-rounded {
 
   position: absolute;
-}*/
+}
 
 
 
@@ -149,6 +149,7 @@ a {
     background-color: rgba(0, 0, 0, .5);
     font-size: .5em;
     padding: 1%;
+
 }
 
 

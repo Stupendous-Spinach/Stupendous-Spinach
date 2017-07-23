@@ -7,8 +7,6 @@ import { bindActionCreators } from 'redux';
 import { axiosAction } from '../helpers/axiosAction';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-import CSSTransitionGroup from 'react-addons-css-transition-group';
-
 require('../styles/main.css');
 
 class NearbyPhotoCard extends Component {
@@ -46,7 +44,6 @@ class NearbyPhotoCard extends Component {
       timeLapse = age[Object.keys(age)[0]];
     }
     let distanceTime = ' ' + `${distance} mi, ${timeLapse }` + ' ';
-    );
 
     return (
       <div className="img-rounded">
