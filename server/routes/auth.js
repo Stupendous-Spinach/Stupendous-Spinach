@@ -80,7 +80,7 @@ router.get('/auth/facebook', middleware.passport.authenticate('facebook', {
 }));
 
 router.get('/auth/facebook/callback', middleware.passport.authenticate('facebook', {
-  successRedirect: '/nearby',
+  successRedirect: process.env.REDIRECT_URL,
   failureRedirect: '/login',
   failureFlash: true
 }));
