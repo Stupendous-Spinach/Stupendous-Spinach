@@ -11,7 +11,8 @@ flashback is Instagram meets Pokemon Go!
 
 ## Roadmap
 
-View the project roadmap [here](LINK_TO_DOC)
+View the project roadmap [here](https://docs.google.com/spreadsheets/d/1E_-B1LNakvEuCvsZOPuVSbs3WW5NiP2rRUozu5YB6yA/edit#gid=0)
+View the App Plan [here](https://docs.google.com/document/d/17ad8X501emTMZGOyQNTGNWyrTotANPO0d8oMzNsyGio/edit)
 
 ## Contributing
 
