@@ -21,13 +21,19 @@ class NavigationBarTop extends Component {
     const refreshOrBackButton = url === 'nearby' ? 'glyphicon fa fa-spinner floatLeft' : 'glyphicon glyphicon-arrow-left floatLeft';
     const refreshOrBackFunction = url === 'nearby' ? this.refreshButton.bind(this) : this.goBackButton.bind(this);
     const flashBackOrComments = url === 'comments' ? 'Comments' : url === 'share' ? 'Share Photo' : url === 'googleMap' ? 'Map' : url === 'chat' ? 'Messages' : url === 'profile' ? 'Profile' : 'flashBack';
+    let profileID;
+    if (!this.props.profile.myId) {
+      profileID = this.props.profile.myId;
+    } else {
+      profileID = this.props.profile.myId.id;
+    }
     return (
       <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
         <div className="container">
           <div className="navbar-header floatCenter">
             <span className={ refreshOrBackButton } aria-hidden="true" onClick={ refreshOrBackFunction }></span>
             <span className="flashback-title">{ flashBackOrComments }</span>
-            <Link to={ `/user/${this.props.profile.myId.id}` }><span className="glyphicon fa fa-user floatRight" aria-hidden="true"></span></Link>
+            <Link to={ `/user/${profileID}` }><span className="glyphicon fa fa-user floatRight" aria-hidden="true"></span></Link>
           </div>
         </div>
       </nav>
