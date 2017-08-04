@@ -10,7 +10,7 @@ export default store.dispatch((dispatch) => {
   }).then(() => {
     return dispatch(imageAction({ location: store.getState().location, max: 20 }));
   }).then(() => {
-    return dispatch(fetchPhotoFromRadius(50, { location: store.getState().location }));
+    return dispatch(fetchPhotoFromRadius(10, { location: store.getState().location }));
   }).then(() => {
     return dispatch(setMyId());
   }).then((data) => {
