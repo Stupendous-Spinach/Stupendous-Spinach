@@ -13,8 +13,8 @@ class Chat extends Component {
       send_id: null,
       receive_id: null
     };
-    // this.socket = io.connect(window.location.hostname);
-    this.socket = io.connect('/');
+    this.socket = io.connect(window.location.hostname);
+//     this.socket = io.connect('/');
     this.handleMessageEvent = this.handleMessageEvent.bind(this);
   }
 
